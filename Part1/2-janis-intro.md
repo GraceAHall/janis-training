@@ -121,8 +121,10 @@ We will start with downloading all the test data required for this workshop. In 
 # to a difference of tar versions when archiving on macOS.
 
 wget -q -O- "https://github.com/PMCC-BioinformaticsCore/janis-training/raw/master/resources/data.tar" \
-    | tar -xz
+    | tar -xv
 ```
+
+
 
 The download contains folders for data, references and the solutions. You can confirm this with:
 
@@ -179,7 +181,7 @@ For our tests, Janis will:
 
 To test that Janis is configured properly, we will run a simple workflow called [`Hello`](https://janis.readthedocs.io/en/latest/tools/unix/hello.html) (click the link to see the documentation). We'll supply an input called `inp`, with value `"Hello, World"`, this will get printed to stdout, and this stdout is captured as an output. This will test that Janis can run in your environment correctly. 
 
-We must specify an output directory (`-o`) to contain the execution and outputs, we'll ask Janis to output our results to a subdirectory called `part1`. 
+We must specify an output directory (`-o`) to contain the execution and outputs, we'll ask Janis to output our results to a subdirectory called `my_hello`. 
 
 ```bash
 janis run -o my_hello hello --inp "Hello, World"

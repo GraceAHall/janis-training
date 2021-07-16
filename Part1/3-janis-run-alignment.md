@@ -97,6 +97,25 @@ Workflow.input(
 )
 ```
 
+[NOTE]
+
+This is a little confusing. They're not actually key: value pairs - theyre positional args. Could reword this to
+
+A workflow input must have two items:
+ - A unique identifier (the name of the input)
+ - The datatype of the input (a janis DataType)
+
+Additionally, we can give a default, and a doc explaining what the input is. 
+
+```
+# a paired-end gz fastq
+w.input("fastq", FastqGzPairedEnd)
+
+# a sample name with defaults and an explanation
+w.input("sample_name", String, "mysample", "The name of the sample")
+```
+[ENDNOTE]
+
 An input requires a unique identifier (string) and a DataType (String, FastqGzPair, etc). We have four inputs we want to expose on this workflow.
 
 1. Sequencing Reads (`FastqGzPairedEnd` - paired end sequence)
