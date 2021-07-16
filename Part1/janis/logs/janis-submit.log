@@ -1,0 +1,5 @@
+2021-07-16T14:16:21 [INFO]: Exporting tool files to '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow/original'
+2021-07-16T14:16:21 [CRITICAL]: Couldn't terminate CWLTool as there was no process ID
+2021-07-16T14:21:04 [WARN]: There was already a 'run.sh' script at '/mnt/d/janis/tutorial/janis-training/part1/janis/run.sh', skipping write
+2021-07-16T14:21:04 [INFO]: Exporting tool files to '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow/original'
+2021-07-16T14:21:04 [INFO]: Exporting tool files to '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow'

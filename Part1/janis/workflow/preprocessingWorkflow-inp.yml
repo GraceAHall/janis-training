@@ -1,0 +1,24 @@
+bwamem_markShorterSplits: true
+bwamem_runtime_cpu: 16
+bwamem_runtime_disks: 20
+bwamem_runtime_memory: 16
+bwamem_runtime_seconds: 86400
+fastq:
+- class: File
+  path: /mnt/d/janis/tutorial/janis-training/data/BRCA1_R1.fastq.gz
+- class: File
+  path: /mnt/d/janis/tutorial/janis-training/data/BRCA1_R2.fastq.gz
+markduplicates_assumeSortOrder: queryname
+markduplicates_runtime_cpu: 4
+markduplicates_runtime_disks: 20
+markduplicates_runtime_memory: 8
+markduplicates_runtime_seconds: 86400
+read_group: '@RG\tID:NA12878\tSM:NA12878\tLB:NA12878\tPL:ILLUMINA'
+reference:
+  class: File
+  path: /mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta
+sample_name: NA12878
+samtoolsview_runtime_cpu: 1
+samtoolsview_runtime_disks: 20
+samtoolsview_runtime_memory: null
+samtoolsview_runtime_seconds: 86400

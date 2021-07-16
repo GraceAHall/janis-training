@@ -114,7 +114,6 @@ w.input("fastq", FastqGzPairedEnd)
 # a sample name with defaults and an explanation
 w.input("sample_name", String, "mysample", "The name of the sample")
 ```
-[ENDNOTE]
 
 An input requires a unique identifier (string) and a DataType (String, FastqGzPair, etc). We have four inputs we want to expose on this workflow.
 
@@ -141,10 +140,11 @@ Similar to exposing inputs, we create steps with the `Workflow.step` method. It 
 ```python
 Workflow.step(
     identifier: str, 
-    tool: janis_core.tool.tool.Tool, 
+    tool: janis_core.tool.tool.Tool, # why is this .tool.tool.Tool lol? 
     scatter: Union[str, List[str], ScatterDescription] = None, 
 )
 ```
+[NOTE] scatter is not explained here! better to leave it out for now? touch on it later when it becomes relevant.
 
 We provide a identifier for the step (unique amongst the other nodes in the workflow), and intialise our tool, passing our inputs of the step as parameters.
 
@@ -230,7 +230,7 @@ Workflow.output(
 
 Often, we don't want to specify the output data type, because we can let Janis do this for us. We'll talk about the `output_folder` and `output_name` in the next few sections. For now, we just have to specify an output identifier and a source.
 
-We'll add an output called `tmp_bamoutput`, and use `markduplicates.out` as the source.
+We'll add an output called `tmp_out_unsortedbam`, and use `markduplicates.out` as the source.
 To add this output to your workflow, add the following line to your code:
 
 ```python
@@ -313,6 +313,9 @@ janis run -o part1 --development --keep-intermediate-files \
     --sample_name NA12878 \
     --read_group "@RG\tID:NA12878\tSM:NA12878\tLB:NA12878\tPL:ILLUMINA"
 ```
+
+[NOTE]
+I hadn't downloaded the data at this stage. When I downloaded the data, the preprocessing.py file was overwritten, which was kinda annoying. Had to copy the workflow out again. 
 
 Hopefully we got `Task has finished with status: Completed`. We can check out output directory:
 

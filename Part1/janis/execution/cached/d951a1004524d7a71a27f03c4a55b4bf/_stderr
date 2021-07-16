@@ -1,0 +1,31 @@
+04:25:52.168 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gatk/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+[Fri Jul 16 04:25:52 UTC 2021] MarkDuplicates  --INPUT /var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam --OUTPUT generated.markduped.bam --METRICS_FILE generated.metrics.txt --ASSUME_SORT_ORDER queryname --TMP_DIR tmp --CREATE_INDEX true  --MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP 50000 --MAX_FILE_HANDLES_FOR_READ_ENDS_MAP 8000 --SORTING_COLLECTION_SIZE_RATIO 0.25 --TAG_DUPLICATE_SET_MEMBERS false --REMOVE_SEQUENCING_DUPLICATES false --TAGGING_POLICY DontTag --CLEAR_DT true --DUPLEX_UMI false --ADD_PG_TAG_TO_READS true --REMOVE_DUPLICATES false --ASSUME_SORTED false --DUPLICATE_SCORING_STRATEGY SUM_OF_BASE_QUALITIES --PROGRAM_RECORD_ID MarkDuplicates --PROGRAM_GROUP_NAME MarkDuplicates --READ_NAME_REGEX <optimized capture of last three ':' separated fields as numeric values> --OPTICAL_DUPLICATE_PIXEL_DISTANCE 100 --MAX_OPTICAL_DUPLICATE_SET_SIZE 300000 --VERBOSITY INFO --QUIET false --VALIDATION_STRINGENCY STRICT --COMPRESSION_LEVEL 2 --MAX_RECORDS_IN_RAM 500000 --CREATE_MD5_FILE false --GA4GH_CLIENT_SECRETS client_secrets.json --help false --version false --showHidden false --USE_JDK_DEFLATER false --USE_JDK_INFLATER false
+Jul 16, 2021 4:25:52 AM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+INFO	2021-07-16 04:25:52	MarkDuplicates	Start of doWork freeMemory: 988755336; totalMemory: 1002438656; maxMemory: 5726797824
+INFO	2021-07-16 04:25:52	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2021-07-16 04:25:52	MarkDuplicates	Will retain up to 20749267 data points before spilling to disk.
+INFO	2021-07-16 04:25:52	MarkDuplicates	Seen many non-increasing record positions. Printing Read-names as well.
+INFO	2021-07-16 04:25:52	MarkDuplicates	Read 19797 records. 0 pairs never matched.
+INFO	2021-07-16 04:25:52	MarkDuplicates	After buildSortedReadEndLists freeMemory: 820029496; totalMemory: 1002438656; maxMemory: 5726797824
+INFO	2021-07-16 04:25:52	MarkDuplicates	Will retain up to 178962432 duplicate indices before spilling to disk.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Sorting list of duplicate records.
+INFO	2021-07-16 04:25:53	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1129586656; totalMemory: 2577924096; maxMemory: 5726797824
+INFO	2021-07-16 04:25:53	MarkDuplicates	Marking 78 records as duplicates.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Found 1 optical duplicate clusters.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Reads are assumed to be ordered by: queryname
+INFO	2021-07-16 04:25:53	MarkDuplicates	Output will not be re-sorted. Output header will state SO:unknown GO:query
+INFO	2021-07-16 04:25:53	MarkDuplicates	Seen many non-increasing record positions. Printing Read-names as well.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Duplicate Index cleanup.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Getting Memory Stats.
+INFO	2021-07-16 04:25:53	MarkDuplicates	Before output close freeMemory: 2558806824; totalMemory: 2577924096; maxMemory: 5726797824
+INFO	2021-07-16 04:25:53	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2021-07-16 04:25:53	MarkDuplicates	After output close freeMemory: 2560892080; totalMemory: 2577924096; maxMemory: 5726797824
+[Fri Jul 16 04:25:53 UTC 2021] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.02 minutes.
+Runtime.totalMemory()=2577924096
+Using GATK jar /gatk/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx6G -jar /gatk/gatk-package-4.1.4.0-local.jar MarkDuplicates -ASO queryname -I /var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam -M generated.metrics.txt -O generated.markduped.bam --CREATE_INDEX --TMP_DIR tmp/

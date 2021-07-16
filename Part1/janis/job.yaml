@@ -1,0 +1,32 @@
+config_dir: /home/grace/.janis/
+db_path: /home/grace/.janis/janis.db
+output_dir: /mnt/d/janis/tutorial/janis-training/part1
+engine: cwltool
+cromwell:
+  call_caching_method: fingerprint
+  timeout: 10
+  db_type: filebased
+template:
+  id: local
+notifications:
+  from_email: janis-noreply@petermac.org
+inputs:
+  fastq:
+  - data/BRCA1_R1.fastq.gz
+  - data/BRCA1_R2.fastq.gz
+  reference: reference/hg38-brca1.fasta
+  sample_name: NA12878
+  read_group: '@RG\tID:NA12878\tSM:NA12878\tLB:NA12878\tPL:ILLUMINA'
+execution_dir: /mnt/d/janis/tutorial/janis-training/part1/janis
+keep_intermediate_files: true
+allow_empty_container: false
+skip_digest_lookup: false
+skip_digest_cache: false
+store_in_central_db: true
+skip_file_check: false
+strict_inputs: false
+should_watch_if_background: false
+run_in_background: false
+digest_cache_location: /home/grace/.janis/digest_cache
+call_caching_enabled: true
+container_type: docker

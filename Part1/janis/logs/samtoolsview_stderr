@@ -1,0 +1,156 @@
+INFO /mnt/d/janis/tutorial/janisenv/bin/cwltool 3.1.20210628163208
+INFO Resolved '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl' to 'file:///mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl'
+INFO [workflow ] start
+INFO [workflow ] starting step bwamem
+INFO [step bwamem] start
+INFO [job bwamem] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af
+INFO ['docker', 'pull', 'biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e']
+docker.io/biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e: Pulling from biocontainers/bwa
+Digest: sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+Status: Image is up to date for biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+docker.io/biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+WARNING [job bwamem] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job bwamem] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af,target=/WUMyuU \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/dshslb3n,target=/tmp \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.fai,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.fai,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.amb,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.amb,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.ann,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.ann,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.bwt,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.bwt,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.pac,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.pac,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.sa,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.sa,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.dict,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.dict,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/data/BRCA1_R1.fastq.gz,target=/var/lib/cwl/stg8728a2c6-4dd5-4421-8a3b-9eae00b3601d/BRCA1_R1.fastq.gz,readonly \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/data/BRCA1_R2.fastq.gz,target=/var/lib/cwl/stg02f47404-7bbd-4b3b-a944-73b6819e14b9/BRCA1_R2.fastq.gz,readonly \
+    --workdir=/WUMyuU \
+    --read-only=true \
+    --net=none \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/xmrgfnww/20210716142124-781471.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/WUMyuU \
+    biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e \
+    /bin/sh \
+    -c \
+    bwa mem -M -R '@RG\tID:NA12878\tSM:NA12878\tLB:NA12878\tPL:ILLUMINA' /var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta /var/lib/cwl/stg8728a2c6-4dd5-4421-8a3b-9eae00b3601d/BRCA1_R1.fastq.gz /var/lib/cwl/stg02f47404-7bbd-4b3b-a944-73b6819e14b9/BRCA1_R2.fastq.gz > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stderr
+INFO [job bwamem] Max memory used: 0MiB
+INFO [job bwamem] completed success
+INFO [step bwamem] completed success
+INFO [workflow ] starting step samtoolsview
+INFO [step samtoolsview] start
+INFO [job samtoolsview] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b
+INFO ['docker', 'pull', 'quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec']
+/usr/bin/docker-credential-desktop.exe: Invalid argument
+quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec: Pulling from biocontainers/samtools
+a3ed95caeb02: Already exists
+b0dc45cd432d: Already exists
+9466b3513669: Already exists
+ddd482ea7b54: Already exists
+4d69f833b9d8: Already exists
+e7c454e5167d: Already exists
+e38092b005c0: Already exists
+a3ed95caeb02: Already exists
+f879b42dfe2b: Already exists
+b26a870956d0: Already exists
+Digest: sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+Status: Image is up to date for quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+WARNING [job samtoolsview] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job samtoolsview] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b,target=/WUMyuU \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/s429dyg_,target=/tmp \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stdout,target=/var/lib/cwl/stgff0cc3cf-8ba8-4e23-86c1-f5466691b3f3/_stdout,readonly \
+    --workdir=/WUMyuU \
+    --read-only=true \
+    --net=none \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/z_u_ti8t/20210716142129-472744.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/WUMyuU \
+    quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec \
+    /bin/sh \
+    -c \
+    samtools view -S -h -b -o _stdout.bam /var/lib/cwl/stgff0cc3cf-8ba8-4e23-86c1-f5466691b3f3/_stdout > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stderr
+INFO [job samtoolsview] Max memory used: 0MiB
+INFO [job samtoolsview] completed success
+INFO [step samtoolsview] completed success
+INFO [workflow ] starting step markduplicates
+INFO [step markduplicates] start
+INFO [job markduplicates] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf
+INFO ['docker', 'pull', 'broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6']
+/usr/bin/docker-credential-desktop.exe: Invalid argument
+docker.io/broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6: Pulling from broadinstitute/gatk
+9ff7e2e5f967: Pulling fs layer
+59856638ac9f: Pulling fs layer
+6f317d6d954b: Pulling fs layer
+a9dde5e2a643: Pulling fs layer
+f7e0d1ec4184: Pulling fs layer
+7d3d0e4b0e60: Pulling fs layer
+7d3d0e4b0e60: Waiting
+f7e0d1ec4184: Waiting
+a9dde5e2a643: Waiting
+6f317d6d954b: Verifying Checksum
+6f317d6d954b: Download complete
+59856638ac9f: Verifying Checksum
+59856638ac9f: Download complete
+a9dde5e2a643: Verifying Checksum
+a9dde5e2a643: Download complete
+9ff7e2e5f967: Verifying Checksum
+9ff7e2e5f967: Download complete
+9ff7e2e5f967: Pull complete
+59856638ac9f: Pull complete
+6f317d6d954b: Pull complete
+a9dde5e2a643: Pull complete
+f7e0d1ec4184: Verifying Checksum
+f7e0d1ec4184: Download complete
+f7e0d1ec4184: Pull complete
+7d3d0e4b0e60: Download complete
+7d3d0e4b0e60: Pull complete
+Digest: sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+Status: Downloaded newer image for broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+docker.io/broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+WARNING [job markduplicates] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job markduplicates] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf,target=/WUMyuU \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/4srbn8f_,target=/tmp \
+    --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stdout.bam,target=/var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam,readonly \
+    --workdir=/WUMyuU \
+    --read-only=true \
+    --net=none \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/7jd3mdc5/20210716142549-990767.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/WUMyuU \
+    broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6 \
+    /bin/sh \
+    -c \
+    gatk MarkDuplicates --java-options '-Xmx6G  ' -ASO queryname -I /var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam -M generated.metrics.txt -O generated.markduped.bam --CREATE_INDEX --TMP_DIR tmp/ > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf/_stderr
+INFO [job markduplicates] Max memory used: 395MiB
+INFO [job markduplicates] completed success
+INFO [step markduplicates] completed success
+INFO [workflow ] completed success
+INFO Final process status is success
+{
+    "tmp_out_unsortedbam": {
+        "location": "file:///mnt/d/janis/tutorial/janis-training/part1/janis/execution/generated.markduped.bam",
+        "basename": "generated.markduped.bam",
+        "class": "File",
+        "checksum": "sha1$ed1d822d5e646a9a946ddd4c30c71bb11cff75c5",
+        "size": 3858546,
+        "secondaryFiles": [],
+        "path": "/mnt/d/janis/tutorial/janis-training/part1/janis/execution/generated.markduped.bam"
+    }
+}

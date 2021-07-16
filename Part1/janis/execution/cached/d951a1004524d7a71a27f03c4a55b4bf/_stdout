@@ -1,0 +1,22 @@
+2021-07-16 04:25:51,227 main ERROR Could not determine local host name java.net.UnknownHostException: 1c2da7f42843: 1c2da7f42843: Temporary failure in name resolution
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at org.apache.logging.log4j.core.util.NetUtils.getLocalHostname(NetUtils.java:53)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:486)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:562)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:578)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:214)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:145)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:41)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:182)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:455)
+	at org.broadinstitute.hellbender.utils.Utils.<clinit>(Utils.java:78)
+	at org.broadinstitute.hellbender.Main.<clinit>(Main.java:48)
+Caused by: java.net.UnknownHostException: 1c2da7f42843: Temporary failure in name resolution
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 11 more
+
+Tool returned:
+0

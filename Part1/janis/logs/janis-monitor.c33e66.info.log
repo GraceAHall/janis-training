@@ -1,0 +1,45 @@
+2021-07-16T14:21:04 [INFO]: Logging debug information to: /mnt/d/janis/tutorial/janis-training/part1/janis/logs/janis-monitor.c33e66.debug.log
+2021-07-16T14:21:04 [INFO]: CWLTool has started with pid=2916
+2021-07-16T14:21:04 [INFO]: Submitted workflow (c33e66), got engine id = 'c33e66'
+2021-07-16T14:21:07 [INFO]: cwltool: INFO /mnt/d/janis/tutorial/janisenv/bin/cwltool 3.1.20210628163208
+2021-07-16T14:21:07 [INFO]: cwltool: INFO Resolved '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl' to 'file:///mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl'
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [workflow ] start
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [workflow ] starting step bwamem
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [step bwamem] start
+2021-07-16T14:21:12 [INFO]: Status changed to: TaskStatus.RUNNING
+2021-07-16T14:21:13 [INFO]: cwltool: INFO [job bwamem] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af
+2021-07-16T14:21:13 [INFO]: cwltool: INFO ['docker', 'pull', 'biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e']
+2021-07-16T14:21:24 [WARN]: cwltool: WARNING [job bwamem] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:21:24 [INFO]: cwltool: INFO [job bwamem] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af$ docker \
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job bwamem] Max memory used: 0MiB
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job bwamem] completed success
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [step bwamem] completed success
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [workflow ] starting step samtoolsview
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [step samtoolsview] start
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job samtoolsview] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b
+2021-07-16T14:21:26 [INFO]: cwltool: INFO ['docker', 'pull', 'quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec']
+2021-07-16T14:21:29 [WARN]: cwltool: WARNING [job samtoolsview] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:21:29 [INFO]: cwltool: INFO [job samtoolsview] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b$ docker \
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job samtoolsview] Max memory used: 0MiB
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job samtoolsview] completed success
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [step samtoolsview] completed success
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [workflow ] starting step markduplicates
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [step markduplicates] start
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job markduplicates] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf
+2021-07-16T14:21:30 [INFO]: cwltool: INFO ['docker', 'pull', 'broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6']
+2021-07-16T14:25:49 [WARN]: cwltool: WARNING [job markduplicates] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:25:49 [INFO]: cwltool: INFO [job markduplicates] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf$ docker \
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [job markduplicates] Max memory used: 395MiB
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [job markduplicates] completed success
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [step markduplicates] completed success
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [workflow ] completed success
+2021-07-16T14:25:53 [INFO]: cwltool: INFO Final process status is success
+2021-07-16T14:25:53 [INFO]: Process has completed
+2021-07-16T14:25:53 [INFO]: CWLTool detected transition to terminal status: TaskStatus.COMPLETED
+2021-07-16T14:25:54 [INFO]: Status changed to: TaskStatus.EXECUTION_ENDED_SUCCESSFULLY
+2021-07-16T14:25:54 [INFO]: Task has finished with status: TaskStatus.EXECUTION_ENDED_SUCCESSFULLY
+2021-07-16T14:25:54 [INFO]: View the task outputs: file:///mnt/d/janis/tutorial/janis-training/part1
+2021-07-16T14:25:54 [INFO]: Received stop_engine request for CWLTool
+2021-07-16T14:25:54 [INFO]: Status changed to: TaskStatus.COMPLETED
+2021-07-16T14:25:54 [INFO]: Finished managing task 'c33e66'.
+2021-07-16T14:25:54 [INFO]: Exiting

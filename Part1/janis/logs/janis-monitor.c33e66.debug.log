@@ -1,0 +1,181 @@
+2021-07-16T14:21:04 [INFO]: Logging debug information to: /mnt/d/janis/tutorial/janis-training/part1/janis/logs/janis-monitor.c33e66.debug.log
+2021-07-16T14:21:04 [DEBUG]: Using janis-assistant: v0.11.7
+2021-07-16T14:21:04 [DEBUG]: Submitting task 'c33e66' to 'cwltool'
+2021-07-16T14:21:04 [DEBUG]: Running command: 'cwltool --outdir /mnt/d/janis/tutorial/janis-training/part1/janis/execution/ --tmpdir-prefix /mnt/d/janis/tutorial/janis-training/part1/janis/execution/ --cachedir /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/ --leave-tmpdir --disable-color /mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl /mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow-inp.yml'
+2021-07-16T14:21:04 [INFO]: CWLTool has started with pid=2916
+2021-07-16T14:21:04 [INFO]: Submitted workflow (c33e66), got engine id = 'c33e66'
+2021-07-16T14:21:07 [INFO]: cwltool: INFO /mnt/d/janis/tutorial/janisenv/bin/cwltool 3.1.20210628163208
+2021-07-16T14:21:07 [INFO]: cwltool: INFO Resolved '/mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl' to 'file:///mnt/d/janis/tutorial/janis-training/part1/janis/workflow/preprocessingWorkflow.cwl'
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [workflow ] start
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [workflow ] starting step bwamem
+2021-07-16T14:21:12 [INFO]: cwltool: INFO [step bwamem] start
+2021-07-16T14:21:12 [DEBUG]: Updated task bwamem with status=TaskStatus.RUNNING
+2021-07-16T14:21:12 [INFO]: Status changed to: TaskStatus.RUNNING
+2021-07-16T14:21:12 [DEBUG]: Skipping email send as no mail program is configured
+2021-07-16T14:21:13 [INFO]: cwltool: INFO [job bwamem] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af
+2021-07-16T14:21:13 [INFO]: cwltool: INFO ['docker', 'pull', 'biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e']
+2021-07-16T14:21:24 [DEBUG]: cwltool: docker.io/biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e: Pulling from biocontainers/bwa
+2021-07-16T14:21:24 [DEBUG]: cwltool: Digest: sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+2021-07-16T14:21:24 [DEBUG]: cwltool: Status: Image is up to date for biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+2021-07-16T14:21:24 [DEBUG]: cwltool: docker.io/biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e
+2021-07-16T14:21:24 [WARN]: cwltool: WARNING [job bwamem] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:21:24 [INFO]: cwltool: INFO [job bwamem] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af$ docker \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     run \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     -i \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af,target=/WUMyuU \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/dshslb3n,target=/tmp \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.fai,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.fai,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.amb,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.amb,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.ann,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.ann,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.bwt,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.bwt,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.pac,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.pac,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.fasta.sa,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta.sa,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/reference/hg38-brca1.dict,target=/var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.dict,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/data/BRCA1_R1.fastq.gz,target=/var/lib/cwl/stg8728a2c6-4dd5-4421-8a3b-9eae00b3601d/BRCA1_R1.fastq.gz,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/data/BRCA1_R2.fastq.gz,target=/var/lib/cwl/stg02f47404-7bbd-4b3b-a944-73b6819e14b9/BRCA1_R2.fastq.gz,readonly \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --workdir=/WUMyuU \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --read-only=true \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --net=none \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --log-driver=none \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --user=1000:1000 \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --rm \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/xmrgfnww/20210716142124-781471.cid \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --env=TMPDIR=/tmp \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     --env=HOME=/WUMyuU \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     biocontainers/bwa@sha256:f7b89eccac454a6cf63fac848b98816b0b3a6c857e23f228778bc33b3da2ca2e \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     /bin/sh \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     -c \
+2021-07-16T14:21:24 [DEBUG]: cwltool:     bwa mem -M -R '@RG\tID:NA12878\tSM:NA12878\tLB:NA12878\tPL:ILLUMINA' /var/lib/cwl/stg0951b3bd-01c6-4624-9603-7b453d85a235/hg38-brca1.fasta /var/lib/cwl/stg8728a2c6-4dd5-4421-8a3b-9eae00b3601d/BRCA1_R1.fastq.gz /var/lib/cwl/stg02f47404-7bbd-4b3b-a944-73b6819e14b9/BRCA1_R2.fastq.gz > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stderr
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job bwamem] Max memory used: 0MiB
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job bwamem] completed success
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [step bwamem] completed success
+2021-07-16T14:21:26 [DEBUG]: Updated task bwamem with status=TaskStatus.COMPLETED
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [workflow ] starting step samtoolsview
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [step samtoolsview] start
+2021-07-16T14:21:26 [DEBUG]: Updated task samtoolsview with status=TaskStatus.RUNNING
+2021-07-16T14:21:26 [INFO]: cwltool: INFO [job samtoolsview] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b
+2021-07-16T14:21:26 [INFO]: cwltool: INFO ['docker', 'pull', 'quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec']
+2021-07-16T14:21:26 [DEBUG]: cwltool: /usr/bin/docker-credential-desktop.exe: Invalid argument
+2021-07-16T14:21:29 [DEBUG]: cwltool: quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec: Pulling from biocontainers/samtools
+2021-07-16T14:21:29 [DEBUG]: cwltool: a3ed95caeb02: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: b0dc45cd432d: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: 9466b3513669: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: ddd482ea7b54: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: 4d69f833b9d8: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: e7c454e5167d: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: e38092b005c0: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: a3ed95caeb02: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: f879b42dfe2b: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: b26a870956d0: Already exists
+2021-07-16T14:21:29 [DEBUG]: cwltool: Digest: sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+2021-07-16T14:21:29 [DEBUG]: cwltool: Status: Image is up to date for quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+2021-07-16T14:21:29 [DEBUG]: cwltool: quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec
+2021-07-16T14:21:29 [WARN]: cwltool: WARNING [job samtoolsview] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:21:29 [INFO]: cwltool: INFO [job samtoolsview] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b$ docker \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     run \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     -i \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b,target=/WUMyuU \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/s429dyg_,target=/tmp \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/2a00d863d8d56b9e8bdd9b41bd0fd0af/_stdout,target=/var/lib/cwl/stgff0cc3cf-8ba8-4e23-86c1-f5466691b3f3/_stdout,readonly \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --workdir=/WUMyuU \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --read-only=true \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --net=none \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --log-driver=none \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --user=1000:1000 \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --rm \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/z_u_ti8t/20210716142129-472744.cid \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --env=TMPDIR=/tmp \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     --env=HOME=/WUMyuU \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     quay.io/biocontainers/samtools@sha256:3883c91317e7b6b62e31c82e2cef3cc1f3a9862633a13f850a944e828dd165ec \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     /bin/sh \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     -c \
+2021-07-16T14:21:29 [DEBUG]: cwltool:     samtools view -S -h -b -o _stdout.bam /var/lib/cwl/stgff0cc3cf-8ba8-4e23-86c1-f5466691b3f3/_stdout > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stderr
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job samtoolsview] Max memory used: 0MiB
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job samtoolsview] completed success
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [step samtoolsview] completed success
+2021-07-16T14:21:30 [DEBUG]: Updated task samtoolsview with status=TaskStatus.COMPLETED
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [workflow ] starting step markduplicates
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [step markduplicates] start
+2021-07-16T14:21:30 [DEBUG]: Updated task markduplicates with status=TaskStatus.RUNNING
+2021-07-16T14:21:30 [INFO]: cwltool: INFO [job markduplicates] Output of job will be cached in /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf
+2021-07-16T14:21:30 [INFO]: cwltool: INFO ['docker', 'pull', 'broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6']
+2021-07-16T14:21:30 [DEBUG]: cwltool: /usr/bin/docker-credential-desktop.exe: Invalid argument
+2021-07-16T14:21:33 [DEBUG]: cwltool: docker.io/broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6: Pulling from broadinstitute/gatk
+2021-07-16T14:21:33 [DEBUG]: cwltool: 9ff7e2e5f967: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: 59856638ac9f: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: 6f317d6d954b: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: a9dde5e2a643: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: f7e0d1ec4184: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: 7d3d0e4b0e60: Pulling fs layer
+2021-07-16T14:21:33 [DEBUG]: cwltool: 7d3d0e4b0e60: Waiting
+2021-07-16T14:21:33 [DEBUG]: cwltool: f7e0d1ec4184: Waiting
+2021-07-16T14:21:33 [DEBUG]: cwltool: a9dde5e2a643: Waiting
+2021-07-16T14:21:34 [DEBUG]: cwltool: 6f317d6d954b: Verifying Checksum
+2021-07-16T14:21:34 [DEBUG]: cwltool: 6f317d6d954b: Download complete
+2021-07-16T14:21:34 [DEBUG]: cwltool: 59856638ac9f: Verifying Checksum
+2021-07-16T14:21:34 [DEBUG]: cwltool: 59856638ac9f: Download complete
+2021-07-16T14:21:35 [DEBUG]: cwltool: a9dde5e2a643: Verifying Checksum
+2021-07-16T14:21:35 [DEBUG]: cwltool: a9dde5e2a643: Download complete
+2021-07-16T14:21:58 [DEBUG]: cwltool: 9ff7e2e5f967: Verifying Checksum
+2021-07-16T14:21:58 [DEBUG]: cwltool: 9ff7e2e5f967: Download complete
+2021-07-16T14:22:00 [DEBUG]: cwltool: 9ff7e2e5f967: Pull complete
+2021-07-16T14:22:00 [DEBUG]: cwltool: 59856638ac9f: Pull complete
+2021-07-16T14:22:00 [DEBUG]: cwltool: 6f317d6d954b: Pull complete
+2021-07-16T14:22:00 [DEBUG]: cwltool: a9dde5e2a643: Pull complete
+2021-07-16T14:23:49 [DEBUG]: cwltool: f7e0d1ec4184: Verifying Checksum
+2021-07-16T14:23:49 [DEBUG]: cwltool: f7e0d1ec4184: Download complete
+2021-07-16T14:24:09 [DEBUG]: cwltool: f7e0d1ec4184: Pull complete
+2021-07-16T14:25:18 [DEBUG]: cwltool: 7d3d0e4b0e60: Download complete
+2021-07-16T14:25:49 [DEBUG]: cwltool: 7d3d0e4b0e60: Pull complete
+2021-07-16T14:25:49 [DEBUG]: cwltool: Digest: sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+2021-07-16T14:25:49 [DEBUG]: cwltool: Status: Downloaded newer image for broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+2021-07-16T14:25:49 [DEBUG]: cwltool: docker.io/broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6
+2021-07-16T14:25:49 [WARN]: cwltool: WARNING [job markduplicates] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+2021-07-16T14:25:49 [INFO]: cwltool: INFO [job markduplicates] /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf$ docker \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     run \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     -i \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf,target=/WUMyuU \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/4srbn8f_,target=/tmp \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --mount=type=bind,source=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/aed308de6587a2ef56e6d6ed21dd623b/_stdout.bam,target=/var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam,readonly \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --workdir=/WUMyuU \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --read-only=true \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --net=none \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --log-driver=none \
+2021-07-16T14:25:49 [DEBUG]: cwltool:     --user=1000:1000 \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     --rm \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     --cidfile=/mnt/d/janis/tutorial/janis-training/part1/janis/execution/7jd3mdc5/20210716142549-990767.cid \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     --env=TMPDIR=/tmp \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     --env=HOME=/WUMyuU \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     broadinstitute/gatk@sha256:cec850f20311f0686fcf88510bc44e529590d78bec7076a603132115943c09e6 \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     /bin/sh \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     -c \
+2021-07-16T14:25:50 [DEBUG]: cwltool:     gatk MarkDuplicates --java-options '-Xmx6G  ' -ASO queryname -I /var/lib/cwl/stg2bc36d07-d287-4ffb-972e-0cbc360fbce8/_stdout.bam -M generated.metrics.txt -O generated.markduped.bam --CREATE_INDEX --TMP_DIR tmp/ > /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf/_stdout 2> /mnt/d/janis/tutorial/janis-training/part1/janis/execution/cached/d951a1004524d7a71a27f03c4a55b4bf/_stderr
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [job markduplicates] Max memory used: 395MiB
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [job markduplicates] completed success
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [step markduplicates] completed success
+2021-07-16T14:25:53 [DEBUG]: Updated task markduplicates with status=TaskStatus.COMPLETED
+2021-07-16T14:25:53 [INFO]: cwltool: INFO [workflow ] completed success
+2021-07-16T14:25:53 [INFO]: cwltool: INFO Final process status is success
+2021-07-16T14:25:53 [INFO]: Process has completed
+2021-07-16T14:25:53 [DEBUG]: {
+2021-07-16T14:25:53 [DEBUG]:     "tmp_out_unsortedbam": {
+2021-07-16T14:25:53 [DEBUG]:         "location": "file:///mnt/d/janis/tutorial/janis-training/part1/janis/execution/generated.markduped.bam",
+2021-07-16T14:25:53 [DEBUG]:         "basename": "generated.markduped.bam",
+2021-07-16T14:25:53 [DEBUG]:         "class": "File",
+2021-07-16T14:25:53 [DEBUG]:         "checksum": "sha1$ed1d822d5e646a9a946ddd4c30c71bb11cff75c5",
+2021-07-16T14:25:53 [DEBUG]:         "size": 3858546,
+2021-07-16T14:25:53 [DEBUG]:         "secondaryFiles": [],
+2021-07-16T14:25:53 [DEBUG]:         "path": "/mnt/d/janis/tutorial/janis-training/part1/janis/execution/generated.markduped.bam"
+2021-07-16T14:25:53 [DEBUG]:     }
+2021-07-16T14:25:53 [DEBUG]: }
+2021-07-16T14:25:53 [INFO]: CWLTool detected transition to terminal status: TaskStatus.COMPLETED
+2021-07-16T14:25:53 [DEBUG]: CWLTool fired 'did exit'
+2021-07-16T14:25:54 [INFO]: Status changed to: TaskStatus.EXECUTION_ENDED_SUCCESSFULLY
+2021-07-16T14:25:54 [INFO]: Task has finished with status: TaskStatus.EXECUTION_ENDED_SUCCESSFULLY
+2021-07-16T14:25:54 [INFO]: View the task outputs: file:///mnt/d/janis/tutorial/janis-training/part1
+2021-07-16T14:25:54 [INFO]: Received stop_engine request for CWLTool
+2021-07-16T14:25:54 [INFO]: Status changed to: TaskStatus.COMPLETED
+2021-07-16T14:25:54 [DEBUG]: Skipping email send as no mail program is configured
+2021-07-16T14:25:54 [INFO]: Finished managing task 'c33e66'.
+2021-07-16T14:25:54 [INFO]: Exiting
