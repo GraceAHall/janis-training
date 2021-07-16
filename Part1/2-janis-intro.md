@@ -120,7 +120,7 @@ We will start with downloading all the test data required for this workshop. In 
 # You might see warnings when untarring this workshop data due
 # to a difference of tar versions when archiving on macOS.
 
-wget -q -O- "https://github.com/PMCC-BioinformaticsCore/janis-training/resources/data.tar" \
+wget -q -O- "https://github.com/PMCC-BioinformaticsCore/janis-training/raw/master/resources/data.tar" \
     | tar -xz
 ```
 
